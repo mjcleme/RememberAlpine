@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Remember Alpine — Celebrating 112 Years of Excellence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero" id="top">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="mountain-graphic" aria-hidden="true">
+        <svg viewBox="0 0 800 260" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="400,20 540,200 260,200" fill="rgba(255,255,255,0.15)" />
+          <polygon points="280,60 420,200 140,200" fill="rgba(255,255,255,0.10)" />
+          <polygon points="540,80 660,200 420,200" fill="rgba(255,255,255,0.08)" />
+        </svg>
+      </div>
+      <div class="hero-logo">
+        <img src="assets/logo.png" alt="Alpine School District" class="hero-logo-img" />
+      </div>
+      <p class="hero-eyebrow">1915 – 2027</p>
+      <h1 class="hero-title">Remember<br /><span class="hero-title-alpine">Alpine</span></h1>
+      <p class="hero-subtitle">Celebrating 112 years of shaping communities and building futures across Utah Valley</p>
+      <div class="hero-countdown" id="countdown">
+        <div class="countdown-block"><span class="countdown-num" id="cd-days">—</span><span class="countdown-label">Days</span></div>
+        <div class="countdown-block"><span class="countdown-num" id="cd-hours">—</span><span class="countdown-label">Hours</span></div>
+        <div class="countdown-block"><span class="countdown-num" id="cd-mins">—</span><span class="countdown-label">Minutes</span></div>
+        <div class="countdown-block"><span class="countdown-num" id="cd-secs">—</span><span class="countdown-label">Seconds</span></div>
+      </div>
+      <p class="hero-countdown-label">Until the Celebration — April 2027</p>
+      <div class="hero-cta-group">
+        <a href="#events" class="btn btn-primary" onclick="showTab('events')">See the Celebration</a>
+        <a href="#volunteer" class="btn btn-outline" onclick="showTab('volunteer')">Get Involved</a>
+        <a href="#donate" class="btn btn-hero-donate" onclick="showTab('donate')">❤️ Donate Now</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll to explore</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </div>
+  </header>
+
+  <!-- STICKY NAV -->
+  <nav class="site-nav" id="site-nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="#top">
+        <span class="nav-brand-icon">🏔️</span>
+        <span>Remember Alpine</span>
+      </a>
+      <ul class="nav-tabs" role="tablist">
+        <li><button class="nav-tab active" role="tab" onclick="showTab('history')" data-tab="history">📜 History</button></li>
+        <li><button class="nav-tab" role="tab" onclick="showTab('events')" data-tab="events">🎉 Events</button></li>
+        <li><button class="nav-tab" role="tab" onclick="showTab('volunteer')" data-tab="volunteer">🙋 Volunteer</button></li>
+        <li><button class="nav-tab nav-tab-donate" role="tab" onclick="showTab('donate')" data-tab="donate">❤️ Donate</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- FLOATING DONATE BUTTON -->
+  <div class="float-donate" id="float-donate">
+    <button class="float-donate-btn" onclick="showTab('donate')" aria-label="Donate">
+      <span class="float-donate-icon">❤️</span>
+      <span class="float-donate-text">Donate</span>
+    </button>
+  </div>
+
+  <!-- BAND STATS -->
+  <section class="stats-band">
+    <div class="stat-item"><span class="stat-num">112</span><span class="stat-label">Years of Service</span></div>
+    <div class="stat-divider"></div>
+    <div class="stat-item"><span class="stat-num">90,000+</span><span class="stat-label">Students Served</span></div>
+    <div class="stat-divider"></div>
+    <div class="stat-item"><span class="stat-num">70+</span><span class="stat-label">Schools</span></div>
+    <div class="stat-divider"></div>
+    <div class="stat-item"><span class="stat-num">#1</span><span class="stat-label">Largest in Utah</span></div>
+  </section>
+
+  <!-- DONATE BANNER -->
+  <div class="donate-ribbon">
+    <div class="donate-ribbon-inner">
+      <div class="donate-ribbon-text">
+        <strong>Help Make This Celebration Possible</strong>
+        <span>Your donation preserves 112 years of Alpine history for future generations.</span>
+      </div>
+      <button class="btn btn-ribbon-donate" onclick="showTab('donate')">❤️ Donate Now</button>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT AREA -->
+  <main class="main-content">
+
+    <!-- ===== HISTORY TAB ===== -->
+    <section id="tab-history" class="tab-panel active" role="tabpanel">
+      <div class="section-header">
+        <h2>A Century of<br /><em>Shaping Communities</em></h2>
+        <p class="section-intro">From a one-room schoolhouse to Utah's largest school district, Alpine has been woven into the fabric of Utah Valley life for over a century. These are our stories.</p>
+      </div>
+
+      <div class="history-book-banner">
+        <div class="book-banner-text">
+          <h3>Shaping Communities &amp; Building Futures</h3>
+          <p>100 Years of Educating Students in Alpine School District</p>
+        </div>
+        <div class="book-banner-quote">
+          <blockquote>"It is a story of what it means to be a community."<cite>— Superintendent Vernon M. Henshaw, Ed.D.</cite></blockquote>
+        </div>
+      </div>
+
+      <div class="timeline-container">
+        <h3 class="timeline-heading">A Timeline of 112 Years</h3>
+
+        <div class="timeline">
+
+          <div class="timeline-era">
+            <div class="era-badge">1915–1919</div>
+            <div class="era-content">
+              <h4>The Beginning</h4>
+              <p>Alpine School District was formally established in 1915, unifying schools across Lehi, American Fork, Pleasant Grove, and Orem. The district opened its doors to <strong>4,906 students</strong> — 2,511 boys and 2,395 girls — ranging from ages 6 to 18. Students rode to school on hay bales in the backs of trucks or in horse-drawn wagons. Teachers earned as little as $55 a month, and the district immediately began advocating for student health by hiring nurses.</p>
+              <div class="era-highlight">First student count: 4,906 across Utah Valley communities</div>
+            </div>
+          </div>
+
+          <div class="timeline-era">
+            <div class="era-badge">1920–1929</div>
+            <div class="era-content">
+              <h4>Progress &amp; Growing Pains</h4>
+              <p>Leadership transitions shaped this decade. In 1922, Superintendent James H. Walker resigned and a financial crisis left 92 teachers waiting months for their salaries. Yet the district pressed forward — by the mid-1920s, staff had grown to include educational supervisors, nurses, and a dentist. The first football game in Lehi High School history was played in 1924.</p>
+              <div class="era-highlight">First Lehi High School football game, 1924</div>
+            </div>
+          </div>
+
+          <div class="timeline-era">
+            <div class="era-badge">1930–1959</div>
+            <div class="era-content">
+              <h4>Challenge, Hope &amp; the Baby Boom</h4>
+              <p>The Great Depression tested the district deeply, yet schools remained open and teachers stayed dedicated. Post-WWII, the baby boom brought explosive growth. By the 1950s, Alpine was building schools at a pace that mirrored Utah Valley's rapid expansion. School lunch programs, new bus routes, and expanded curricula defined this era of hopeful rebuilding.</p>
+              <div class="era-highlight">District survived the Depression and emerged stronger</div>
+            </div>
+          </div>
+
+          <div class="timeline-era">
+            <div class="era-badge">1960–1969</div>
+            <div class="era-content">
+              <h4>Social Change &amp; Advancement</h4>
+              <p>In 1968, out of 875 graduates, 612 went on to higher education — 40% to BYU alone. Title I legislation in 1965 expanded services to underserved students. In 1969, Alpine District assumed responsibility for special education, ensuring every child had access to a quality education. The district was recognized nationally for Utah's school consolidation model.</p>
+              <div class="era-highlight">1968: 70% of graduates pursued higher education</div>
+            </div>
+          </div>
+
+          <div class="timeline-era">
+            <div class="era-badge">1970–1979</div>
+            <div class="era-content">
+              <h4>More With Less</h4>
+              <p>Student population reached 17,742 by 1970. The district launched community school programs, introduced Title IX, and opened the Clear Creek Outdoor Education Camp in 1972 — a beloved tradition still cherished by generations of Alpine students. The Spanish Immersion Program began in 1978 at Cherry Hill Elementary. First classroom computers arrived in 1978 (Commodore PET machines).</p>
+              <div class="era-highlight">Clear Creek Camp opened 1972 — generations of memories made</div>
+            </div>
+          </div>
+
+          <div class="timeline-era">
+            <div class="era-badge">1980–1989</div>
+            <div class="era-content">
+              <h4>Productivity &amp; Innovation</h4>
+              <p>Mountain View High School opened in 1980, giving Orem two high schools. In 1981, Eilene Peterson became the first female member of the ASD Board of Education. The district became one of the first in Utah to embrace classroom technology. The decade saw remarkable growth — student population climbing past 26,969 — as new cities like Highland and Cedar Hills incorporated.</p>
+              <div class="era-highlight">First female board member, 1981</div>
+            </div>
+          </div>
+
+          <div class="timeline-era">
+            <div class="era-badge">1990–1999</div>
+            <div class="era-content">
+              <h4>Keeping the Community Together</h4>
+              <p>The Christa McAuliffe Space Education Center opened at Central Elementary in Pleasant Grove in 1990, captivating over 350,000 students with space simulations and teamwork missions. The decade saw continued growth and a commitment to keeping diverse communities united under one district banner as suburban growth accelerated across Utah Valley.</p>
+              <div class="era-highlight">Space Education Center: 350,000+ students launched their imaginations</div>
+            </div>
+          </div>
+
+          <div class="timeline-era">
+            <div class="era-badge">2000–2009</div>
+            <div class="era-content">
+              <h4>Unprecedented Growth</h4>
+              <p>Alpine became the <strong>largest school district in Utah</strong> — and eventually moved to <strong>47th largest in the nation</strong> out of 17,000+ districts. Student population surpassed 70,000. New cities like Saratoga Springs brought waves of new students. The district launched the American Fork High School Marching Band to national prominence, including a performance in the Macy's Thanksgiving Day Parade.</p>
+              <div class="era-highlight">Largest district in Utah — 68,000+ students by 2011</div>
+            </div>
+          </div>
+
+          <div class="timeline-era">
+            <div class="era-badge">2010–2015</div>
+            <div class="era-content">
+              <h4>Continuous Improvement</h4>
+              <p>Ten consecutive years (2003–2013) of steady increases in student test scores. Named to the National AP Honor Roll. Noelle Pikus-Pace, a Mountain View High School graduate, won a silver medal at the 2014 Winter Olympics. A culture of teacher collaboration and professional learning communities transformed outcomes across every school in the district. Despite spending barely a third of New York City's per-pupil costs, Alpine matched their outcomes.</p>
+              <div class="era-highlight">2014: Olympian Noelle Pikus-Pace — Alpine's silver medalist</div>
+            </div>
+          </div>
+
+          <div class="timeline-era era-present">
+            <div class="era-badge">2015–2027</div>
+            <div class="era-content">
+              <h4>The Final Chapter — and a New Legacy</h4>
+              <p>In 2015, Alpine School District celebrated its 100th anniversary with the publication of <em>"Shaping Communities &amp; Building Futures."</em> The district continued to grow and innovate, serving communities from Lehi and Highland to Saratoga Springs and beyond. In a historic decision, Alpine School District will conclude its 112-year run in July 2027 as Utah Valley reorganizes into new districts — but the memories, the friendships, and the legacy belong to all of us forever.</p>
+              <div class="era-highlight era-highlight-gold">April 2027: We celebrate together one final time</div>
+            </div>
+          </div>
+
+        </div><!-- /timeline -->
+      </div><!-- /timeline-container -->
+
+      <div class="community-grid">
+        <h3 class="section-subhead">Communities We've Called Home</h3>
+        <div class="community-cards">
+          <div class="community-card">🏙️<span>Lehi</span></div>
+          <div class="community-card">🏙️<span>American Fork</span></div>
+          <div class="community-card">🏙️<span>Pleasant Grove</span></div>
+          <div class="community-card">🏙️<span>Orem</span></div>
+          <div class="community-card">🏙️<span>Highland</span></div>
+          <div class="community-card">🏙️<span>Cedar Hills</span></div>
+          <div class="community-card">🏙️<span>Saratoga Springs</span></div>
+          <div class="community-card">🏙️<span>Alpine</span></div>
+          <div class="community-card">🏙️<span>Lindon</span></div>
+          <div class="community-card">🏙️<span>Vineyard</span></div>
+          <div class="community-card">🏙️<span>Cedar Fort</span></div>
+          <div class="community-card">🏙️<span>Eagle Mountain</span></div>
+        </div>
+      </div>
+
+      <div class="history-share-cta">
+        <div class="share-cta-text">
+          <h3>Share Your Memory</h3>
+          <p>Every Alpine student, teacher, and community member has a story. Submit yours and it may be featured at the April 2027 celebration or displayed in the community memory wall.</p>
+        </div>
+        <a href="#" class="btn btn-primary" onclick="showTab('volunteer'); return false;">Submit a Memory</a>
+      </div>
+
+    </section>
+
+    <!-- ===== EVENTS TAB ===== -->
+    <section id="tab-events" class="tab-panel" role="tabpanel">
+      <div class="section-header">
+        <h2>The Celebration<br /><em>April 2027</em></h2>
+        <p class="section-intro">A community-wide celebration honoring 112 years of Alpine School District excellence. Mark your calendars — this is a once-in-a-lifetime event for all of Utah Valley.</p>
+      </div>
+
+      <div class="events-hero-banner">
+        <div class="events-banner-content">
+          <div class="events-banner-date">
+            <span class="event-month">APRIL</span>
+            <span class="event-year">2027</span>
+          </div>
+          <div class="events-banner-text">
+            <h3>Remember Alpine Celebration Week</h3>
+            <p>A week of events honoring students, teachers, staff, and communities across Utah Valley</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="schedule-grid">
+
+        <div class="schedule-day">
+          <div class="day-header">
+            <span class="day-date">Monday, April 19</span>
+            <span class="day-theme">Day of Remembrance</span>
+          </div>
+          <div class="day-events">
+            <div class="event-item">
+              <span class="event-time">10:00 AM</span>
+              <div class="event-details">
+                <strong>Memory Wall Opening</strong>
+                <p>Community Memory Wall unveiling at the Alpine School District offices, 575 N 100 E, American Fork. Featuring photos, letters, and stories from 112 years of students and teachers.</p>
+                <span class="event-location">📍 ASD District Offices, American Fork</span>
+              </div>
+            </div>
+            <div class="event-item">
+              <span class="event-time">2:00 PM</span>
+              <div class="event-details">
+                <strong>Historical Photo Exhibition</strong>
+                <p>A curated display of photographs spanning 1915 to 2027 — from one-room schoolhouses to modern campuses across Utah Valley.</p>
+                <span class="event-location">📍 American Fork City Hall</span>
+              </div>
+            </div>
+            <div class="event-item">
+              <span class="event-time">7:00 PM</span>
+              <div class="event-details">
+                <strong>Oral History Gathering</strong>
+                <p>Join alumni, retired teachers, and community leaders as they share their most treasured memories. Open mic format — all are welcome to share.</p>
+                <span class="event-location">📍 American Fork High School Auditorium</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="schedule-day">
+          <div class="day-header">
+            <span class="day-date">Tuesday, April 20</span>
+            <span class="day-theme">Teacher &amp; Staff Appreciation</span>
+          </div>
+          <div class="day-events">
+            <div class="event-item">
+              <span class="event-time">9:00 AM</span>
+              <div class="event-details">
+                <strong>Educator Hall of Fame Induction</strong>
+                <p>Honoring the teachers and staff who dedicated their careers to Alpine students. Nominations open through February 2027.</p>
+                <span class="event-location">📍 Lehi High School</span>
+              </div>
+            </div>
+            <div class="event-item">
+              <span class="event-time">6:00 PM</span>
+              <div class="event-details">
+                <strong>Teacher Reunion Dinner</strong>
+                <p>A formal gathering for current and retired Alpine District educators. Tickets required — see registration form below.</p>
+                <span class="event-location">📍 Utah Valley Convention Center, Provo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="schedule-day">
+          <div class="day-header">
+            <span class="day-date">Wednesday, April 21</span>
+            <span class="day-theme">School Spirit Day</span>
+          </div>
+          <div class="day-events">
+            <div class="event-item">
+              <span class="event-time">All Day</span>
+              <div class="event-details">
+                <strong>Alumni School Visits</strong>
+                <p>All 70+ Alpine schools open their doors to alumni. Wear your school colors and visit your old halls. Connect with current students and your former principals.</p>
+                <span class="event-location">📍 All Alpine District Schools</span>
+              </div>
+            </div>
+            <div class="event-item">
+              <span class="event-time">4:00 PM</span>
+              <div class="event-details">
+                <strong>High School Alumni Clash</strong>
+                <p>A friendly multi-school alumni sports tournament — basketball, volleyball, and more. Represent your high school one more time!</p>
+                <span class="event-location">📍 Pleasant Grove High School</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="schedule-day schedule-day-featured">
+          <div class="day-header">
+            <span class="day-date">Thursday, April 22</span>
+            <span class="day-theme">⭐ Grand Celebration Gala</span>
+          </div>
+          <div class="day-events">
+            <div class="event-item event-item-featured">
+              <span class="event-time">5:00 PM</span>
+              <div class="event-details">
+                <strong>Remember Alpine Grand Gala</strong>
+                <p>The centerpiece event of the celebration — a community gala featuring live performances by Alpine's finest musicians and bands, a keynote address by district leaders, a video tribute, and dancing. Black tie optional. All community members welcome.</p>
+                <span class="event-location">📍 Utah Valley Convention Center, Provo</span>
+                <span class="event-ticket">🎟️ Tickets on sale January 2027</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="schedule-day">
+          <div class="day-header">
+            <span class="day-date">Friday, April 23</span>
+            <span class="day-theme">Youth &amp; Family Day</span>
+          </div>
+          <div class="day-events">
+            <div class="event-item">
+              <span class="event-time">10:00 AM</span>
+              <div class="event-details">
+                <strong>Clear Creek Reunion</strong>
+                <p>A celebration of the beloved Clear Creek Outdoor Education Camp, which opened in 1972. Share your Clear Creek stories and connect with fellow campers across the decades.</p>
+                <span class="event-location">📍 Outdoor venue — TBA</span>
+              </div>
+            </div>
+            <div class="event-item">
+              <span class="event-time">1:00 PM</span>
+              <div class="event-details">
+                <strong>Student Art &amp; Performance Showcase</strong>
+                <p>Current Alpine students present art, music, drama, and STEM projects inspired by 112 years of district history. The future honoring the past.</p>
+                <span class="event-location">📍 Orem High School</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="schedule-day">
+          <div class="day-header">
+            <span class="day-date">Saturday, April 24</span>
+            <span class="day-theme">Community Parade &amp; Festival</span>
+          </div>
+          <div class="day-events">
+            <div class="event-item event-item-featured">
+              <span class="event-time">9:00 AM</span>
+              <div class="event-details">
+                <strong>Remember Alpine Community Parade</strong>
+                <p>A grand parade through American Fork featuring all high school marching bands, floats representing each city in the district, and special alumni contingents. Celebrate side by side on Main Street!</p>
+                <span class="event-location">📍 Main Street, American Fork</span>
+              </div>
+            </div>
+            <div class="event-item">
+              <span class="event-time">11:00 AM – 6:00 PM</span>
+              <div class="event-details">
+                <strong>Remember Alpine Festival</strong>
+                <p>A massive community festival with food booths, games, vintage school memorabilia market, live entertainment, reunions by graduating class, and a time capsule ceremony. Free admission.</p>
+                <span class="event-location">📍 American Fork Main Street &amp; Amphitheater</span>
+              </div>
+            </div>
+            <div class="event-item">
+              <span class="event-time">9:00 PM</span>
+              <div class="event-details">
+                <strong>Closing Fireworks Celebration</strong>
+                <p>A spectacular fireworks display to close the celebration week — lighting up Utah Valley skies one last time in honor of Alpine School District.</p>
+                <span class="event-location">📍 American Fork, visible from across Utah Valley</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /schedule-grid -->
+
+      <div class="events-notify">
+        <h3>Stay Updated on Events</h3>
+        <p>Event details are still being finalized. Sign up to receive updates as schedules are confirmed.</p>
+        <form class="notify-form" onsubmit="handleNotify(event)">
+          <input type="email" placeholder="Your email address" required class="form-input" />
+          <button type="submit" class="btn btn-primary">Notify Me</button>
+        </form>
+        <p id="notify-confirm" class="form-success hidden">Thank you! We'll keep you posted.</p>
+      </div>
+
+    </section>
+
+    <!-- ===== VOLUNTEER TAB ===== -->
+    <section id="tab-volunteer" class="tab-panel" role="tabpanel">
+      <div class="section-header">
+        <h2>Make It<br /><em>Happen Together</em></h2>
+        <p class="section-intro">This celebration is by the community, for the community. We need hundreds of volunteers to make the Remember Alpine week unforgettable. Will you be part of history?</p>
+      </div>
+
+      <div class="volunteer-why">
+        <div class="why-card">
+          <span class="why-icon">🎓</span>
+          <h4>Honor Our Teachers</h4>
+          <p>Help coordinate the Educator Hall of Fame and teacher reunion events that recognize those who gave so much to Alpine students.</p>
+        </div>
+        <div class="why-card">
+          <span class="why-icon">📸</span>
+          <h4>Preserve the Memories</h4>
+          <p>Help collect, organize, and display photos and stories at the Memory Wall and historical exhibition.</p>
+        </div>
+        <div class="why-card">
+          <span class="why-icon">🎉</span>
+          <h4>Run the Festival</h4>
+          <p>From parade marshaling to festival booths to setup and cleanup — your hands make the celebration happen.</p>
+        </div>
+        <div class="why-card">
+          <span class="why-icon">🕐</span>
+          <h4>Flexible Commitment</h4>
+          <p>Volunteer for a single shift, a single day, or the entire week. Every hour of help matters and is deeply appreciated.</p>
+        </div>
+      </div>
+
+      <div class="volunteer-roles">
+        <h3>Available Volunteer Roles</h3>
+        <div class="roles-grid">
+          <div class="role-item"><span class="role-icon">🎪</span><span>Festival Setup &amp; Operations</span></div>
+          <div class="role-item"><span class="role-icon">📋</span><span>Registration &amp; Check-In</span></div>
+          <div class="role-item"><span class="role-icon">🖼️</span><span>Memory Wall Curator</span></div>
+          <div class="role-item"><span class="role-icon">🎵</span><span>Parade Coordinator</span></div>
+          <div class="role-item"><span class="role-icon">🍕</span><span>Food Booth Volunteer</span></div>
+          <div class="role-item"><span class="role-icon">📣</span><span>Community Outreach</span></div>
+          <div class="role-item"><span class="role-icon">🎬</span><span>Photography &amp; Videography</span></div>
+          <div class="role-item"><span class="role-icon">🧹</span><span>Event Cleanup Crew</span></div>
+          <div class="role-item"><span class="role-icon">👶</span><span>Youth Activity Leader</span></div>
+          <div class="role-item"><span class="role-icon">🚗</span><span>Transportation &amp; Logistics</span></div>
+          <div class="role-item"><span class="role-icon">💻</span><span>Social Media &amp; Marketing</span></div>
+          <div class="role-item"><span class="role-icon">🏆</span><span>Alumni Class Liaison</span></div>
+        </div>
+      </div>
+
+      <div class="volunteer-form-wrapper">
+        <h3>Sign Up to Volunteer</h3>
+        <form class="volunteer-form" onsubmit="handleVolunteer(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="v-fname">First Name *</label>
+              <input type="text" id="v-fname" class="form-input" required placeholder="Jane" />
+            </div>
+            <div class="form-group">
+              <label for="v-lname">Last Name *</label>
+              <input type="text" id="v-lname" class="form-input" required placeholder="Smith" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="v-email">Email Address *</label>
+              <input type="email" id="v-email" class="form-input" required placeholder="jane@example.com" />
+            </div>
+            <div class="form-group">
+              <label for="v-phone">Phone Number</label>
+              <input type="tel" id="v-phone" class="form-input" placeholder="(801) 555-0123" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="v-city">City</label>
+            <select id="v-city" class="form-input form-select">
+              <option value="">Select your city</option>
+              <option>American Fork</option>
+              <option>Lehi</option>
+              <option>Pleasant Grove</option>
+              <option>Orem</option>
+              <option>Highland</option>
+              <option>Cedar Hills</option>
+              <option>Saratoga Springs</option>
+              <option>Alpine</option>
+              <option>Lindon</option>
+              <option>Vineyard</option>
+              <option>Eagle Mountain</option>
+              <option>Cedar Fort</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="v-school">Alpine School(s) you attended or are connected to</label>
+            <input type="text" id="v-school" class="form-input" placeholder="e.g. Lehi High, American Fork High, Mountain View High..." />
+          </div>
+          <div class="form-group">
+            <label>Volunteer Interests (select all that apply)</label>
+            <div class="checkbox-grid">
+              <label class="checkbox-item"><input type="checkbox" value="festival" /> Festival Setup &amp; Operations</label>
+              <label class="checkbox-item"><input type="checkbox" value="registration" /> Registration &amp; Check-In</label>
+              <label class="checkbox-item"><input type="checkbox" value="memory-wall" /> Memory Wall Curator</label>
+              <label class="checkbox-item"><input type="checkbox" value="parade" /> Parade Coordinator</label>
+              <label class="checkbox-item"><input type="checkbox" value="food" /> Food Booth Volunteer</label>
+              <label class="checkbox-item"><input type="checkbox" value="outreach" /> Community Outreach</label>
+              <label class="checkbox-item"><input type="checkbox" value="photo" /> Photography &amp; Videography</label>
+              <label class="checkbox-item"><input type="checkbox" value="cleanup" /> Event Cleanup Crew</label>
+              <label class="checkbox-item"><input type="checkbox" value="youth" /> Youth Activity Leader</label>
+              <label class="checkbox-item"><input type="checkbox" value="transport" /> Transportation &amp; Logistics</label>
+              <label class="checkbox-item"><input type="checkbox" value="social" /> Social Media &amp; Marketing</label>
+              <label class="checkbox-item"><input type="checkbox" value="alumni" /> Alumni Class Liaison</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="v-availability">Availability</label>
+            <div class="checkbox-grid">
+              <label class="checkbox-item"><input type="checkbox" value="apr19" /> Mon April 19</label>
+              <label class="checkbox-item"><input type="checkbox" value="apr20" /> Tue April 20</label>
+              <label class="checkbox-item"><input type="checkbox" value="apr21" /> Wed April 21</label>
+              <label class="checkbox-item"><input type="checkbox" value="apr22" /> Thu April 22 (Gala)</label>
+              <label class="checkbox-item"><input type="checkbox" value="apr23" /> Fri April 23</label>
+              <label class="checkbox-item"><input type="checkbox" value="apr24" /> Sat April 24 (Parade &amp; Festival)</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="v-memory">Share a Memory (optional)</label>
+            <textarea id="v-memory" class="form-input form-textarea" rows="4" placeholder="Tell us your favorite Alpine memory — it may be featured at the celebration or on the Memory Wall..."></textarea>
+          </div>
+          <div class="form-group">
+            <label for="v-skills">Special Skills or Resources You Could Contribute</label>
+            <textarea id="v-skills" class="form-input form-textarea" rows="3" placeholder="e.g. graphic design, sound equipment, a venue, food/catering, musical talent..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-large">Join the Volunteer Team</button>
+        </form>
+        <p id="volunteer-confirm" class="form-success hidden">Thank you! We'll be in touch with volunteer details as the celebration approaches. You're helping make history!</p>
+      </div>
+
+    </section>
+
+    <!-- ===== DONATE TAB ===== -->
+    <section id="tab-donate" class="tab-panel" role="tabpanel">
+      <div class="section-header">
+        <h2>Invest in<br /><em>Our Legacy</em></h2>
+        <p class="section-intro">The Remember Alpine celebration is made possible by the generosity of community members, businesses, and alumni who believe this milestone deserves to be honored in a way worthy of 112 years of excellence.</p>
+      </div>
+
+      <div class="donate-impact">
+        <div class="impact-card">
+          <span class="impact-amount">$25</span>
+          <span class="impact-label">Supports the Memory Wall</span>
+          <p>Helps preserve, print, and display photographs and stories from 112 years of Alpine history.</p>
+        </div>
+        <div class="impact-card">
+          <span class="impact-amount">$100</span>
+          <span class="impact-label">Sponsors a Family at the Festival</span>
+          <p>Covers event costs for a family to enjoy the Saturday festival, parade, and fireworks celebration.</p>
+        </div>
+        <div class="impact-card impact-card-featured">
+          <span class="impact-badge">Most Popular</span>
+          <span class="impact-amount">$250</span>
+          <span class="impact-label">Community Champion</span>
+          <p>Funds a booth or display at the festival, honoring a school, neighborhood, or community milestone.</p>
+        </div>
+        <div class="impact-card">
+          <span class="impact-amount">$500</span>
+          <span class="impact-label">Event Sponsor</span>
+          <p>Your name or business recognized as a sponsor of one of the week's featured events.</p>
+        </div>
+        <div class="impact-card">
+          <span class="impact-amount">$1,000+</span>
+          <span class="impact-label">Legacy Sponsor</span>
+          <p>Premier recognition throughout the celebration week, in printed programs, and on the permanent commemoration.</p>
+        </div>
+      </div>
+
+      <div class="sponsor-tiers">
+        <h3>Sponsorship Tiers</h3>
+        <div class="tier-table">
+          <div class="tier-row tier-header">
+            <span>Tier</span><span>Amount</span><span>Recognition</span>
+          </div>
+          <div class="tier-row tier-gold">
+            <span>🥇 Gold — Legacy Sponsor</span><span>$5,000+</span><span>Premier logo placement, named event sponsor, VIP Gala tickets, permanent commemoration</span>
+          </div>
+          <div class="tier-row tier-silver">
+            <span>🥈 Silver — Heritage Sponsor</span><span>$2,500+</span><span>Logo on all materials, 4 Gala tickets, festival booth recognition</span>
+          </div>
+          <div class="tier-row tier-bronze">
+            <span>🥉 Bronze — Community Sponsor</span><span>$1,000+</span><span>Name in program, 2 Gala tickets, website recognition</span>
+          </div>
+          <div class="tier-row tier-supporter">
+            <span>⭐ Supporter</span><span>$250+</span><span>Name in program and on website</span>
+          </div>
+          <div class="tier-row tier-friend">
+            <span>💛 Friend of Alpine</span><span>Any amount</span><span>Heartfelt gratitude and the knowledge you helped preserve history</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="donate-form-wrapper">
+        <h3>Make a Donation</h3>
+        <p class="donate-note">All donations support the Remember Alpine Celebration, a community-organized event honoring Alpine School District's 112-year legacy. A donation confirmation will be sent to your email.</p>
+
+        <form class="donate-form" onsubmit="handleDonate(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="d-fname">First Name *</label>
+              <input type="text" id="d-fname" class="form-input" required placeholder="John" />
+            </div>
+            <div class="form-group">
+              <label for="d-lname">Last Name *</label>
+              <input type="text" id="d-lname" class="form-input" required placeholder="Smith" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="d-email">Email Address *</label>
+            <input type="email" id="d-email" class="form-input" required placeholder="john@example.com" />
+          </div>
+          <div class="form-group">
+            <label>Donation Amount *</label>
+            <div class="amount-buttons">
+              <button type="button" class="amount-btn" onclick="selectAmount(this, '25')">$25</button>
+              <button type="button" class="amount-btn" onclick="selectAmount(this, '100')">$100</button>
+              <button type="button" class="amount-btn amount-btn-active" onclick="selectAmount(this, '250')">$250</button>
+              <button type="button" class="amount-btn" onclick="selectAmount(this, '500')">$500</button>
+              <button type="button" class="amount-btn" onclick="selectAmount(this, '1000')">$1,000</button>
+            </div>
+            <div class="form-group" style="margin-top:0.5rem">
+              <label for="d-custom">Or enter a custom amount</label>
+              <input type="number" id="d-custom" class="form-input" placeholder="$ Other amount" min="1" oninput="clearAmountBtns()" />
+            </div>
+            <input type="hidden" id="d-amount" value="250" />
+          </div>
+          <div class="form-group">
+            <label for="d-designation">Designation (optional)</label>
+            <select id="d-designation" class="form-input form-select">
+              <option value="general">Where most needed</option>
+              <option value="memory-wall">Memory Wall &amp; Exhibition</option>
+              <option value="gala">Grand Gala Celebration</option>
+              <option value="parade">Parade &amp; Festival</option>
+              <option value="teacher">Teacher Appreciation Events</option>
+              <option value="youth">Youth &amp; Student Programs</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="d-honor">In Honor / Memory Of (optional)</label>
+            <input type="text" id="d-honor" class="form-input" placeholder="e.g. In memory of Coach Williams, Class of 1978" />
+          </div>
+          <div class="form-group">
+            <label for="d-message">Message (optional)</label>
+            <textarea id="d-message" class="form-input form-textarea" rows="3" placeholder="Share why Alpine means something to you..."></textarea>
+          </div>
+          <div class="form-group">
+            <label class="checkbox-item checkbox-item-large">
+              <input type="checkbox" id="d-anonymous" /> Make this donation anonymous
+            </label>
+          </div>
+
+          <div class="payment-notice">
+            <span>🔒</span>
+            <p>Secure payment processing will be configured before the site goes live. Clicking "Donate" below will register your pledge — our team will follow up with payment instructions.</p>
+          </div>
+
+          <button type="submit" class="btn btn-donate btn-large">Donate to Remember Alpine</button>
+        </form>
+        <p id="donate-confirm" class="form-success hidden">Thank you for your generosity! Your pledge has been received. We'll be in touch soon with details. You are helping preserve 112 years of history!</p>
+      </div>
+
+      <div class="donate-corporate">
+        <h3>Business &amp; Corporate Sponsorships</h3>
+        <p>Is your business part of the Utah Valley community that Alpine School District helped build? We'd love to partner with you. Corporate sponsors receive premier recognition throughout the celebration and in all Remember Alpine materials.</p>
+        <a href="mailto:remember@alpineschools.org" class="btn btn-outline">Contact Us About Sponsorship</a>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-icon">🏔️</span>
+        <div>
+          <h4>Remember Alpine</h4>
+          <p>Celebrating 112 Years · Alpine School District · 1915–2027</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.alpineschools.org/" target="_blank" rel="noopener">Alpine School District</a>
+        <a href="#" onclick="showTab('history'); return false;">History</a>
+        <a href="#" onclick="showTab('events'); return false;">Events</a>
+        <a href="#" onclick="showTab('volunteer'); return false;">Volunteer</a>
+        <a href="#" onclick="showTab('donate'); return false;">Donate</a>
+      </div>
+      <p class="footer-tagline">"Shaping Communities &amp; Building Futures" — 1915 to 2027</p>
+      <p class="footer-copy">© 2026 Remember Alpine Celebration Committee. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/scripts.js"></script>
+</body>
+</html>
